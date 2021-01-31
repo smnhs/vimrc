@@ -31,6 +31,11 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Syntax
 Plugin 'vim-syntastic/syntastic'
+" let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_auto_jump = 1
 
 " PEP-8
 Plugin 'nvie/vim-flake8'
@@ -53,7 +58,7 @@ set autoread
 set clipboard=unnamed
 set modelines=0
 set ttyfast
-set undofile " save undo information in files. After reopening it is not lost 
+" set undofile " save undo information in files. After reopening it is not lost 
 
 set expandtab
 set smarttab
@@ -178,3 +183,9 @@ set statusline+=%=≼
 
 set statusline+=\ %{ModeCurrent()}
 
+set statusline+=
+
+let g:syntastic_stl_format = "[%E{Err: l.%F #%t}]"
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
