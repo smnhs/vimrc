@@ -10,7 +10,7 @@ If you are new to Vim and want to get started I recommend trying the vimtutor. I
 
 ## Setup
 - Download the project.
-- Rename the 'vimrc' file to '.vimrc' and put in in your home directory.
+- Rename the 'vimrc' file to '.vimrc' and put in in your home directory.  
     Alternative: Put the file as 'vimrc' in the '~/.vim/' folder.
 - Put the templates folder in the '~/.vim/' folder.
 - Install and Setup [Vundle](https://github.com/VundleVim/Vundle.vim)
