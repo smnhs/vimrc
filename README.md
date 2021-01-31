@@ -13,14 +13,51 @@ If you are new to Vim and want to get started I recommend trying the vimtutor. I
 - Put the templates folder in the '~/.vim/' folder.
 - Install and Setup [Vundle](https://github.com/VundleVim/Vundle.vim)
 
+## Status Line
+![Status Line](/screenshots/StatusLine.png)
+Hand crafted status line **without plugins**. Much copy-paste in the process, but I am proud of how it turned out. Just paste the code in your vimrc file and try out if it fits for you!
+```
+" status line
+" Dictionary: take mode() input -> longer notation of current mode
+" mode() is defined by Vim
+let g:currentmode={ 'n' : 'Normal ', 'no' : 'N·Operator Pending ', 'v' : 'Visual ', 'V' : 'V·Line ', '^V' : 'V·Block ', 's' : 'Select ', 'S': 'S·Line ', '^S' : 'S·Block ', 'i' : 'Insert ', 'R' : 'Replace ', 'Rv' : 'V·Replace ', 'c' : 'Command ', 'cv' : 'Vim Ex ', 'ce' : 'Ex ', 'r' : 'Prompt ', 'rm' : 'More ', 'r?' : 'Confirm ', '!' : 'Shell ', 't' : 'Terminal '}
+
+" Function: return current mode
+function! ModeCurrent() abort
+    let l:modecurrent = mode()
+    let l:modelist = toupper(get(g:currentmode, l:modecurrent, 'V·Block '))
+    let l:current_status_mode = l:modelist
+    return l:current_status_mode
+endfunction
+
+set laststatus=2
+set statusline=
+set statusline+=%#function#\ %p%% " show line number
+set statusline+=\ %*
+set statusline+=≼
+set statusline+=\ %t
+set statusline+=≽\ %*
+set statusline+=%m
+set statusline+=
+set statusline+=%#keyword#\ %F  " show full file path
+set statusline+=%=≼
+
+set statusline+=\ %{ModeCurrent()}
+```
+
+**Helpful resources:**  
+https://kadekillary.work/post/statusline-vim/  
+https://jdhao.github.io/2019/11/03/vim_custom_statusline/  
+
+
 ## Tipps & Tricks
 In the following are some tipps & tricks I found useful:
 
 ### Entering Command Mode
 Normally you need to tip ':' to enter the command mode.  
 `nnoremap ; :`  
-maps ';' to ':'.  
-Now enter the command mode either with ':' or ';'.  
+maps ';' to ':'   
+You can now enter the command mode either with ':' or ';'.  
 This saves pressing the shift key for my keyboard layout. But you can map it to whatever fits for you.  
 
 ### Line Numbers
@@ -46,42 +83,6 @@ inoremap {<CR> {<CR>}<ESC>O
 *Did you wonder about the difference between 'inoremap' and 'nnoremap'?*  
 The first letter stands for the mode you are in while mapping.  
 i -> input, n -> normal, v -> visual,...  
-
-### Status Line
-Hand crafted status line **without plugins**. Much copy-paste in the process, but I am proud of how it turned out. Just paste the code in your vimrc file and try out if it fits for you!
-```
-" status line
-" Dictionary: take mode() input -> longer notation of current mode
-" mode() is defined by Vim
-let g:currentmode={ 'n' : 'Normal ', 'no' : 'N·Operator Pending ', 'v' : 'Visual ', 'V' : 'V·Line ', '^V' : 'V·Block ', 's' : 'Select ', 'S': 'S·Line ', '^S' : 'S·Block ', 'i' : 'Insert ', 'R' : 'Replace ', 'Rv' : 'V·Replace ', 'c' : 'Command ', 'cv' : 'Vim Ex ', 'ce' : 'Ex ', 'r' : 'Prompt ', 'rm' : 'More ', 'r?' : 'Confirm ', '!' : 'Shell ', 't' : 'Terminal '}
-
-" Function: return current mode
-function! ModeCurrent() abort
-    let l:modecurrent = mode()
-    let l:modelist = toupper(get(g:currentmode, l:modecurrent, 'V·Block '))
-    let l:current_status_mode = l:modelist
-    return l:current_status_mode
-endfunction
-
-
-set laststatus=2
-set statusline=
-set statusline+=%#function#\ %p%% " show line number
-set statusline+=\ %*
-set statusline+=≼
-set statusline+=\ %t
-set statusline+=≽\ %*
-set statusline+=%m
-set statusline+=
-set statusline+=%#keyword#\ %F  " show full file path
-set statusline+=%=≼
-
-set statusline+=\ %{ModeCurrent()}
-```
-
-**Helpful resources:**  
-https://kadekillary.work/post/statusline-vim/  
-https://jdhao.github.io/2019/11/03/vim_custom_statusline/  
 
 ### Templates
 I made a template for HTML files, which is loaded when creating a new .html file. The skeleton is found in the templates folder. It works the same for all filetypes:  
