@@ -47,7 +47,7 @@ inoremap {<CR> {<CR>}<ESC>O
 The first letter stands for the mode you are in while mapping.  
 i -> input, n -> normal, v -> visual,...  
 
-## Status Line
+### Status Line
 Hand crafted status line **without plugins**. Much copy-paste in the process, but I am proud of how it turned out. Just paste the code in your vimrc file and try out if it fits for you!
 ```
 " status line
@@ -87,7 +87,7 @@ https://jdhao.github.io/2019/11/03/vim_custom_statusline/
 I made a template for HTML files, which is loaded when creating a new .html file. The skeleton is found in the templates folder. It works the same for all filetypes:  
 `au BufNewFile *.html 0r ~/.vim/templates/skeleton.html`  
 
-### Plugins
+## Plugins
 For Plugins I use [Vundle](https://github.com/VundleVim/Vundle.vim). It is the only plugin manager I tried, but it works smooth and simple.  
 
 My current installed Plugins:  
