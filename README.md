@@ -18,8 +18,10 @@ In the following are some tipps & tricks I found useful:
 
 ### Entering Command Mode
 Normally you need to tip ':' to enter the command mode.  
-`nnoremap ; :` maps ';' to ':' and you.  
-Now enter the command mode either with ':' or ';'. This saves pressing the shift key for my keyboard layout. But you can map it to whatever fits for you.  
+`nnoremap ; :`  
+maps ';' to ':'.  
+Now enter the command mode either with ':' or ';'.  
+This saves pressing the shift key for my keyboard layout. But you can map it to whatever fits for you.  
 
 ### Line Numbers
 Turn line numbers on:  
@@ -29,8 +31,9 @@ Show relative linenumber to current line on:
 This is helpful for navigating or other position related actions.  
 
 ### Auto close brackets and quotes
-This code inserts the second bracket or quote automatically after tipping the first. But it still does not work as convenient as you may be used to.
-```inoremap " ""<left>
+This code inserts the second bracket or quote automatically after typing the first. But it still does not work as convenient as you may be used to.
+```
+inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
@@ -45,7 +48,7 @@ The first letter stands for the mode you are in while mapping.
 i -> input, n -> normal, v -> visual,...  
 
 ## Status Line
-Hand crafted status line without plugins. Much copy-paste in the process, but I am proud of how it turned out. Just paste the code in your vimrc file and try out if it fits for you!
+Hand crafted status line **without plugins**. Much copy-paste in the process, but I am proud of how it turned out. Just paste the code in your vimrc file and try out if it fits for you!
 ```
 " status line
 " Dictionary: take mode() input -> longer notation of current mode
@@ -81,7 +84,7 @@ https://kadekillary.work/post/statusline-vim/
 https://jdhao.github.io/2019/11/03/vim_custom_statusline/  
 
 ### Templates
-I made a template for HTML files, which is loaded when creating a new .html file. The skeleton is found in the templates folder and it works the same for all filetypes:  
+I made a template for HTML files, which is loaded when creating a new .html file. The skeleton is found in the templates folder. It works the same for all filetypes:  
 `au BufNewFile *.html 0r ~/.vim/templates/skeleton.html`  
 
 ### Plugins
