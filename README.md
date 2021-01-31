@@ -1,6 +1,6 @@
 # My vimrc file
 
-![Window](/screenshots/Window)  
+![Window](/screenshots/Window.png)  
 
 After I got started with vim, I now copy-pasted my own vim config file.
 I am pretty happy with it right now, but it is not finished.
