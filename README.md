@@ -2,9 +2,9 @@
 
 After I got started with vim, I now copy-pasted my own vim config file.
 I am pretty happy with it right now, but it is not finished.
-Probably it will never be finished, because VIM is awesome and there is a lot more to discover.
+Probably it will never be finished, because VIM is awesome and there is a lot more to discover.  
 However, I would like to share my configurations with you.
-If you are new to Vim and want to get started I recommend trying the vimtutor. It should e installed with Vim. Simply type `vimtutor` in your terminal.
+If you are new to Vim and want to get started I recommend trying the vimtutor. It should be installed with Vim. Simply type `vimtutor` in your terminal.
 
 ## Setup
 - Download the project.
@@ -22,11 +22,11 @@ Normally you need to tip ':' to enter the command mode.
 Now enter the command mode either with ':' or ';'. This saves pressing the shift key for my keyboard layout. But you can map it to whatever fits for you.
 
 ### Line Numbers
-Turn line numbers on:
-`set nu`
-Show relative linenumber to current line on:
-`set relativenumber`
-This is helpful for navigating if you want to jump to a specific point.
+Turn line numbers on:  
+`set nu`  
+Show relative linenumber to current line on:  
+`set relativenumber`  
+This is helpful for navigating or other position related actions.  
 
 ### Auto close brackets and quotes
 This code inserts the second bracket or quote automatically after tipping the first. But it still does not work as convenient as you may be used to.
@@ -40,8 +40,8 @@ inoremap [<CR> [<CR>]<ESC>O
 inoremap {<CR> {<CR>}<ESC>O
 ```
 
-*Did you wonder about the difference between 'inoremap' and 'nnoremap'?*
-The first letter stands for the mode you are in while mapping. i -> input, n -> normal, v -> visual,...
+*Did you wonder about the difference between 'inoremap' and 'nnoremap'?*  
+The first letter stands for the mode you are in while mapping. i -> input, n -> normal, v -> visual,...  
 
 ## Status Line
 Hand crafted status line without plugins. Much copy-paste in the process, but I am proud of how it turned out. Just paste the code in your vimrc file and try out if it fits for you!
@@ -75,18 +75,18 @@ set statusline+=%=≼
 set statusline+=\ %{ModeCurrent()}
 ```
 
-Helpful resources:
-https://kadekillary.work/post/statusline-vim/
-https://jdhao.github.io/2019/11/03/vim_custom_statusline/
+Helpful resources:  
+https://kadekillary.work/post/statusline-vim/  
+https://jdhao.github.io/2019/11/03/vim_custom_statusline/  
 
 ### Templates
 I made a template for HTML files, which is loaded when creating a new .html file. The skeleton is found in the templates folder and it works the same for all filetypes:
 `au BufNewFile *.html 0r ~/.vim/templates/skeleton.html`
 
 ### Plugins
-For Plugins I use [Vundle](https://github.com/VundleVim/Vundle.vim). It is the only plugin manager I tried, but it works smooth and simple.
+For Plugins I use [Vundle](https://github.com/VundleVim/Vundle.vim). It is the only plugin manager I tried, but it works smooth and simple.  
 
-My current installed Plugins:
+My current installed Plugins:  
 - [Nerdtree](https://github.com/preservim/nerdtree)
 - [Vim-Devicons](https://github.com/ryanoasis/vim-deviconsa)
 - [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
@@ -98,5 +98,6 @@ My current installed Plugins:
 
 
 ## Other helpful resources
-- https://stevelosh.com/blog/2010/09/coming-home-to-vim/
-
+- https://dougblack.io/words/a-good-vimrc.html
+- https://stevelosh.com/blog/2010/09/coming-home-to-vim/  
+- https://realpython.com/vim-and-python-a-match-made-in-heaven/
