@@ -4,15 +4,15 @@
 
 After I got started with vim, I now copy-pasted my own vim config file.
 I am pretty happy with it right now, but it is not finished.
-Probably it will never be finished, because VIM is awesome and there is a lot more to discover.  
+Probably it will never be finished, because Vim is awesome and there is a lot more to discover.  
 However, I would like to share my configurations with you.
 If you are new to Vim and want to get started I recommend trying the vimtutor. It should be installed with Vim. Simply type `vimtutor` in your terminal.
 
 ## Setup
 - Download the project.
 - Rename the 'vimrc' file to '.vimrc' and put in in your home directory.  
-    Alternative: Put the file as 'vimrc' in the '~/.vim/' folder.
-- Put the templates folder in the '~/.vim/' folder.
+    *Alternative:* Put the file as 'vimrc' in your '~/.vim/' folder.
+- Put the 'templates' folder in your '~/.vim/' folder.
 - Install and Setup [Vundle](https://github.com/VundleVim/Vundle.vim)
 
 ## Status Line
@@ -58,8 +58,8 @@ In the following are some tipps & tricks I found useful:
 ### Entering Command Mode
 Normally you need to tip ':' to enter the command mode.  
 `nnoremap ; :`  
-maps ';' to ':'   
-You can now enter the command mode either with ':' or ';'.  
+maps `;` to `:`   
+You can now enter the command mode either with `:` or `;`.  
 This saves pressing the shift key for my keyboard layout. But you can map it to whatever fits for you.  
 
 ### Line Numbers
@@ -70,7 +70,7 @@ Show relative linenumber to current line on:
 This is helpful for navigating or other position related actions.  
 
 ### Auto close brackets and quotes
-This code inserts the second bracket or quote automatically after typing the first. But it still does not work as convenient as you may be used to.
+This code inserts the second bracket or quote automatically after you typed the first one. But it still does not work as convenient as you may be used to.
 ```
 inoremap " ""<left>
 inoremap ' ''<left>
@@ -87,7 +87,7 @@ The first letter stands for the mode you are in while mapping.
 i -> input, n -> normal, v -> visual,...  
 
 ### Templates
-I made a template for HTML files, which is loaded when creating a new .html file. The skeleton is found in the templates folder. It works the same for all filetypes:  
+I made a template for HTML files, which is loaded when creating a new `.html` file. The skeleton is found in the templates folder. It works the same for all filetypes:  
 `au BufNewFile *.html 0r ~/.vim/templates/skeleton.html`  
 
 ## Plugins
@@ -95,13 +95,13 @@ For Plugins I use [Vundle](https://github.com/VundleVim/Vundle.vim). It is the o
 
 My current installed Plugins:  
 - [Nerdtree](https://github.com/preservim/nerdtree): Little file browser inside vim
-- [Vim-Devicons](https://github.com/ryanoasis/vim-devicons): Adds pretty icons to filetypes
-- [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe): Adds code completion
-- [IndentPython](https://github.com/vim-scripts/indentpython.vim): Adds right indentation for python
+- [Vim-Devicons](https://github.com/ryanoasis/vim-devicons): Pretty icons to filetypes
+- [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe): Code completion
+- [IndentPython](https://github.com/vim-scripts/indentpython.vim): Indents Python code according to the PEP 8 standards
 - [Syntastic](https://github.com/vim-syntastic/syntastic): Adds syntax checking
 - [vim-flake8](https://github.com/nvie/vim-flake8): Syntax and style checking
 - [goyo](https://github.com/junegunn/goyo.vim): Distraction free mode
-- [SimpylFold](https://github.com/tmhedberg/SimpylFold): Improved python folding
+- [SimpylFold](https://github.com/tmhedberg/SimpylFold): Improved Python folding
 
 
 ## Other helpful resources
