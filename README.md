@@ -17,9 +17,9 @@ If you are new to Vim and want to get started I recommend trying the vimtutor. I
 In the following are some tipps & tricks I found useful:
 
 ### Entering Command Mode
-Normally you need to tip ':' to enter the command mode.
-`nnoremap ; :` maps ';' to ':' and you.
-Now enter the command mode either with ':' or ';'. This saves pressing the shift key for my keyboard layout. But you can map it to whatever fits for you.
+Normally you need to tip ':' to enter the command mode.  
+`nnoremap ; :` maps ';' to ':' and you.  
+Now enter the command mode either with ':' or ';'. This saves pressing the shift key for my keyboard layout. But you can map it to whatever fits for you.  
 
 ### Line Numbers
 Turn line numbers on:  
@@ -41,7 +41,8 @@ inoremap {<CR> {<CR>}<ESC>O
 ```
 
 *Did you wonder about the difference between 'inoremap' and 'nnoremap'?*  
-The first letter stands for the mode you are in while mapping. i -> input, n -> normal, v -> visual,...  
+The first letter stands for the mode you are in while mapping.  
+i -> input, n -> normal, v -> visual,...  
 
 ## Status Line
 Hand crafted status line without plugins. Much copy-paste in the process, but I am proud of how it turned out. Just paste the code in your vimrc file and try out if it fits for you!
@@ -75,26 +76,26 @@ set statusline+=%=≼
 set statusline+=\ %{ModeCurrent()}
 ```
 
-Helpful resources:  
+**Helpful resources:**  
 https://kadekillary.work/post/statusline-vim/  
 https://jdhao.github.io/2019/11/03/vim_custom_statusline/  
 
 ### Templates
-I made a template for HTML files, which is loaded when creating a new .html file. The skeleton is found in the templates folder and it works the same for all filetypes:
-`au BufNewFile *.html 0r ~/.vim/templates/skeleton.html`
+I made a template for HTML files, which is loaded when creating a new .html file. The skeleton is found in the templates folder and it works the same for all filetypes:  
+`au BufNewFile *.html 0r ~/.vim/templates/skeleton.html`  
 
 ### Plugins
 For Plugins I use [Vundle](https://github.com/VundleVim/Vundle.vim). It is the only plugin manager I tried, but it works smooth and simple.  
 
 My current installed Plugins:  
-- [Nerdtree](https://github.com/preservim/nerdtree)
-- [Vim-Devicons](https://github.com/ryanoasis/vim-deviconsa)
-- [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
-- [IndentPython](https://github.com/vim-scripts/indentpython.vim)
-- [Syntastic](https://github.com/vim-syntastic/syntastic)
-- [vim-flake8](https://github.com/nvie/vim-flake8)
-- [goyo](https://github.com/junegunn/goyo.vim)
-- [SimpylFold](https://github.com/tmhedberg/SimpylFold)
+- [Nerdtree](https://github.com/preservim/nerdtree): Little file browser inside vim
+- [Vim-Devicons](https://github.com/ryanoasis/vim-devicons): Adds pretty icons to filetypes
+- [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe): Adds code completion
+- [IndentPython](https://github.com/vim-scripts/indentpython.vim): Adds right indentation for python
+- [Syntastic](https://github.com/vim-syntastic/syntastic): Adds syntax checking
+- [vim-flake8](https://github.com/nvie/vim-flake8): Syntax and style checking
+- [goyo](https://github.com/junegunn/goyo.vim): Distraction free mode
+- [SimpylFold](https://github.com/tmhedberg/SimpylFold): Improved python folding
 
 
 ## Other helpful resources
