@@ -17,8 +17,11 @@ If you are new to Vim and want to get started I recommend trying the vimtutor. I
 
 ## Status Line
 ![Status Line](/screenshots/StatusLine.png)  
-Hand crafted status line **without plugins**. Much copy-paste in the process, but I am proud of how it turned out. Just paste the code in your vimrc file and try out if it fits for you!
-```
+Hand crafted status line **without plugins**. Much copy-paste in the process, but I am proud of how it turned out. Just paste the code in your vimrc file and try out if it fits for you!  
+
+**Code:**
+
+```vim
 " status line
 " Dictionary: take mode() as input -> longer notation of current mode
 " mode() is defined by Vim
@@ -94,15 +97,18 @@ I made a template for HTML files, which is loaded when creating a new `.html` fi
 For Plugins I use [Vundle](https://github.com/VundleVim/Vundle.vim). It is the only plugin manager I tried, but it works smooth and simple.  
 
 My current installed Plugins:  
-- [Nerdtree](https://github.com/preservim/nerdtree): Little file browser inside vim
-- [Vim-Devicons](https://github.com/ryanoasis/vim-devicons): Pretty icons to filetypes
-- [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe): Code completion
-- [IndentPython](https://github.com/vim-scripts/indentpython.vim): Indents Python code according to the PEP 8 standards
-- [Syntastic](https://github.com/vim-syntastic/syntastic): Adds syntax checking
-- [vim-flake8](https://github.com/nvie/vim-flake8): Syntax and style checking
-- [goyo](https://github.com/junegunn/goyo.vim): Distraction free mode
-- [vim-markdown](https://github.com/gabrielelana/vim-markdown): Nice Markdown support
-- [SimpylFold](https://github.com/tmhedberg/SimpylFold): Improved Python folding
+  
+Plugin | Short Description
+------ | -----------------
+[Nerdtree](https://github.com/preservim/nerdtree) | Little file browser inside vim
+[Vim-Devicons](https://github.com/ryanoasis/vim-devicons) | Pretty icons to filetypes
+[YouCompleteMe](https://github.com/ycm-core/YouCompleteMe) | Code completion
+[IndentPython](https://github.com/vim-scripts/indentpython.vim) | Indents Python code according to the PEP 8 standards
+[Syntastic](https://github.com/vim-syntastic/syntastic) | Adds syntax checking
+[vim-flake8](https://github.com/nvie/vim-flake8) | Syntax and style checking
+[goyo](https://github.com/junegunn/goyo.vim) | Distraction free mode
+[vim-markdown](https://github.com/gabrielelana/vim-markdown) | Nice Markdown support
+[SimpylFold](https://github.com/tmhedberg/SimpylFold) | Improved Python folding
 
 
 ## Other helpful resources
