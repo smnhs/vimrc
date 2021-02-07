@@ -29,7 +29,7 @@ Plugin 'Valloric/YouCompleteMe'
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
-" Syntax
+" Syntax checking
 Plugin 'vim-syntastic/syntastic'
 " let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -39,6 +39,10 @@ let g:syntastic_auto_jump = 1
 
 " PEP-8
 Plugin 'nvie/vim-flake8'
+
+" Markdown
+Plugin 'gabrielelana/vim-markdown'
+let g:markdown_enable_spell_checking = 0
 
 " distraction free mode
 Plugin 'junegunn/goyo.vim'
@@ -130,7 +134,6 @@ au BufNewFile,BufRead *.js, *.html, *.css
 au BufNewFile,BufRead *.md
     \ set filetype=markdown | " treat all .md files as markdown
     \ set cursorline | " Highlight the line the cursor is on
-    \ set conceallevel=2 | " Hide and format markdowm elements
 
 " templates for new files
 augroup templates

@@ -101,6 +101,7 @@ My current installed Plugins:
 - [Syntastic](https://github.com/vim-syntastic/syntastic): Adds syntax checking
 - [vim-flake8](https://github.com/nvie/vim-flake8): Syntax and style checking
 - [goyo](https://github.com/junegunn/goyo.vim): Distraction free mode
+- [vim-markdown](https://github.com/gabrielelana/vim-markdown): Nice Markdown support
 - [SimpylFold](https://github.com/tmhedberg/SimpylFold): Improved Python folding
 
 
