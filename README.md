@@ -10,9 +10,9 @@ If you are new to Vim and want to get started I recommend trying the vimtutor. I
 
 ## Setup
 - Download the project.
-- Rename the 'vimrc' file to '.vimrc' and put in in your home directory.  
-    *Alternative:* Put the file as 'vimrc' in your '~/.vim/' folder.
-- Put the 'templates' folder in your '~/.vim/' folder.
+- Rename the `vimrc` file to `.vimrc` and put in in your home directory.  
+    *Alternative:* Put the file as `vimrc` in your `~/.vim/` folder.
+- Put the 'templates' folder in your `~/.vim/` folder.
 - Install and Setup [Vundle](https://github.com/VundleVim/Vundle.vim)
 
 ## Status Line
@@ -23,9 +23,15 @@ Hand crafted status line **without plugins**. Much copy-paste in the process, bu
 
 ```vim
 " status line
-" Dictionary: take mode() as input -> longer notation of current mode
+" dictionary: take mode() as input -> longer notation of current mode
 " mode() is defined by Vim
-let g:currentmode={ 'n' : 'Normal ', 'no' : 'N·Operator Pending ', 'v' : 'Visual ', 'V' : 'V·Line ', '^V' : 'V·Block ', 's' : 'Select ', 'S': 'S·Line ', '^S' : 'S·Block ', 'i' : 'Insert ', 'R' : 'Replace ', 'Rv' : 'V·Replace ', 'c' : 'Command ', 'cv' : 'Vim Ex ', 'ce' : 'Ex ', 'r' : 'Prompt ', 'rm' : 'More ', 'r?' : 'Confirm ', '!' : 'Shell ', 't' : 'Terminal '}
+let g:currentmode = { 
+  'n' : 'Normal ', 'no' : 'N·Operator Pending ', 'v' : 'Visual ', 
+  'V' : 'V·Line ', '^V' : 'V·Block ', 's' : 'Select ', 'S': 'S·Line ', 
+  '^S' : 'S·Block ', 'i' : 'Insert ', 'R' : 'Replace ', 'Rv' : 'V·Replace ', 
+  'c' : 'Command ', 'cv' : 'Vim Ex ', 'ce' : 'Ex ', 'r' : 'Prompt ', 
+  'rm' : 'More ', 'r?' : 'Confirm ', '!' : 'Shell ', 't' : 'Terminal '
+}
 
 " Function: return current mode
 function! ModeCurrent() abort
@@ -43,7 +49,6 @@ set statusline+=≼
 set statusline+=\ %t
 set statusline+=≽\ %*
 set statusline+=%m
-set statusline+=
 set statusline+=%#keyword#\ %F  " show full file path
 set statusline+=%=≼
 
@@ -74,7 +79,8 @@ This is helpful for navigating or other position related actions.
 
 ### Auto close brackets and quotes
 This code inserts the second bracket or quote automatically after you typed the first one. But it still does not work as convenient as you may be used to.
-```
+
+```vim
 inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ( ()<left>
@@ -96,7 +102,7 @@ I made a template for HTML files, which is loaded when creating a new `.html` fi
 ## Plugins
 For Plugins I use [Vundle](https://github.com/VundleVim/Vundle.vim). It is the only plugin manager I tried, but it works smooth and simple.  
 
-My current installed Plugins:  
+**My currently installed Plugins:**  
   
 Plugin | Short Description
 ------ | -----------------
